@@ -1,7 +1,5 @@
 
-using HandsOnAPIUsingModels.Repositories;
-
-namespace HandsOnAPIUsingModels
+namespace HandsOnAPIUsingModelValidation
 {
     public class Program
     {
@@ -10,7 +8,7 @@ namespace HandsOnAPIUsingModels
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddSingleton<ITeacherRepository,TeacherRepository>();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -30,7 +28,7 @@ namespace HandsOnAPIUsingModels
 
             app.MapControllers();
 
-           app.Run();
+            app.Run();
         }
     }
 }
